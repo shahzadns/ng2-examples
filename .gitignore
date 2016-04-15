@@ -15,3 +15,7 @@
 
 ### TypeScript typings files
 /**/typings/
+
+### Compiled/transformed JavaScript and it's map files.
+/**/*.js
+/**/*.js.map
