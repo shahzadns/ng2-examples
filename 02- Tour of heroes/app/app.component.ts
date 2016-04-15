@@ -13,6 +13,7 @@ import {HeroService} from './hero.service';
   template: `
   <h1>{{title}}</h1>
   <h2>My Heroes</h2>
+  <p *ngIf="!heroes">Fetching list...</p>
   <ul class="heroes">
     <li *ngFor="#hero of heroes"
     [class.selected]=" hero === selectedHero"
@@ -90,7 +91,8 @@ export class AppComponent implements OnInit {
   }
 
   getHeroes() {
-    this._heroService.getHeroes().then(heroes => this.heroes = heroes);
+    //this._heroService.getHeroes().then(heroes => this.heroes = heroes);
+    this._heroService.getHeroesSlowly().then(heroes => this.heroes = heroes);
   }
 
   onSelect(hero: Hero) {
