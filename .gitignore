@@ -1,0 +1,17 @@
+### WebStorm project files
+/**/.idea/
+
+### Visual Studio project files
+/**/.vscode/
+
+### Bower dependencies
+/**/bower_components
+
+### Node dependencies
+/**/node_modules
+
+### NPM logs
+/**/npm-debug.log
+
+### TypeScript typings files
+/**/typings/
