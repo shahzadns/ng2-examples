@@ -1,5 +1,5 @@
 # ng2-examples
-A collection of basic to advance examples that I am going to create while learning angular2 framework, some from the official documentation i.e. [angular.io](https://angular.io/docs/ts/latest/quickstart.html) and some from [ng-book2] (https://www.ng-book.com/2/)
+A collection of basic to advance examples that help in learning angular2 framework. From these examples, some are from the official documentation i.e. [angular.io](https://angular.io/docs/ts/latest/quickstart.html) and some from [ng-book2] (https://www.ng-book.com/2/) etc.
 
 ###Check-out Examples
 We can check out and play with these examples on the local machine, by doing following steps.
@@ -10,5 +10,7 @@ We can check out and play with these examples on the local machine, by doing fol
 - run `npm start`
 - check out the local server on `localhost:3000`
 
+####Contribute
+If you would like to share some examples that you made, just fork and raise a PR ! : )
 
 Cheers!
