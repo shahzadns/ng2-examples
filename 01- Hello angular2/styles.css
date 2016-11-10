@@ -12,12 +12,8 @@ h2, h3 {
 body {
     margin: 2em;
 }
-body, input[text], button {
-    color: #888;
-    font-family: Cambria, Georgia;
-}
 
 /*
- * See https://github.com/angular/angular.io/blob/master/public/docs/_examples/styles.css
+ * See https://github.com/angular/angular.io/blob/master/public/docs/_examples/_boilerplate/styles.css
  * for the full set of master styles used by the documentation samples
  */
