@@ -11,10 +11,7 @@ import { HEROES } from '../mock-heroes';
 export class HeroesComponent implements OnInit {
 
   heroes = HEROES;
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  };
+  selectedHero: Hero;
 
   constructor() {
     console.log('HeroesComponent: constructor:');
@@ -22,6 +19,12 @@ export class HeroesComponent implements OnInit {
 
   ngOnInit() {
     console.log('HeroesComponent: ngOnInit:');
+  }
+
+  onSelect(hero: Hero, $event: any, context: any): void {
+    /* testing event info, and this context when function called from templates */
+    console.log('HeroesComponent: onSelect:', hero, $event, context);
+    this.selectedHero = hero;
   }
 
 }

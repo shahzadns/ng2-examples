@@ -1,18 +1,28 @@
 <!-- selected hero -->
-<h2>{{hero.name | uppercase}} Details</h2>
+<div *ngIf="selectedHero">
+  <h2>{{selectedHero.name | uppercase}} Details</h2>
 
-<!-- edit selected hero -->
-<div><span>id: </span>{{hero.id}}</div>
-<div>
-  <label>name:
-    <input [(ngModel)]="hero.name" placeholder="name"/>
-  </label>
+  <!-- edit selected hero -->
+  <div><span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+    </label>
+  </div>
 </div>
+
 
 <!-- heroes list -->
 <h2>My Heroes</h2>
 <ul class="heroes">
-  <li *ngFor="let hero of heroes">
+
+  <!-- note: testing multiple class directives, $event, and "this". -->
+
+  <li *ngFor="let hero of heroes"
+      [class.selected]="hero === selectedHero"
+      [class.foo]="true" [class.bar]="false" [class.baz]="true"
+      (click)="onSelect(hero, $event, this)">
+
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
