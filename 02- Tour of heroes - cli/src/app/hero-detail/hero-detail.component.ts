@@ -9,7 +9,7 @@ import { Hero } from '../hero';
 })
 export class HeroDetailComponent implements OnInit {
 
-  //receive info from parent to child via template data binding
+  //receive info from parent to child via property binding
   @Input() hero: Hero;
 
   constructor() {
