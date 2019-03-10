@@ -13,11 +13,11 @@ export class HeroDetailComponent implements OnInit {
   @Input() hero: Hero;
 
   constructor() {
-    console.log('ngOnInit: constructor:');
+    console.log('HeroDetailComponent: constructor:');
   }
 
   ngOnInit() {
-    console.log('ngOnInit: ngOnInit:');
+    console.log('HeroDetailComponent: ngOnInit:');
   }
 
 }
