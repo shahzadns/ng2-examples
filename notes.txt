@@ -1,0 +1,87 @@
+notes on angular 6 learning
+
+====
+setup:
+
+> npm install @angular/cli@6.8.3
+> ng new hello-ng6
+
+====
+Course outline / Structure:
+
+1 getting starts
+2 the basics
+3 components & data bindings
+4 directives
+5 services & DI
+6 Routing
+7 Observables
+8 Forms
+9 Pipes
+10 HTTP
+11 Authentication
+12 Optimisations & ngModules
+13 Deployments
+14 Animations & Testing
+
+====
+ngModel:
+
+- used for two way data bindings from form elements.
+--
+// component html part
+<input type="text" [(ngModel)]="firstName">
+<span> {{firstName}} </span>
+--
+// module file part
+import {FormsModule} from '@angular/forms';
+
+...{
+imports: [
+  BootstrapModule,
+  FormsModule
+],
+...}
+
+====
+bootstrap CSS include
+
+inside angular.json file
+> projects > [project name] > architect > build >
+"styles" > [
+ "node_modules/bootstrap/dist/css/bootstrap.min.css",
+ "src/styles.css"
+]
+
+// note: whole bootstrap will be injected to DOM and internal stylesheet i.e. inside <style>...</style>  inside the head.
+
+====
+angular app load flow:
+
+index.html > auto injections for scripts:
+1 inline.bundle.js
+2 polyfills.bundle.js
+3 styles.bundle.js
+4 vendor.bundle.js
+5 main.bundle.js
+
+bootstrap:
+main.ts >
+
+import { platformBrowserDynamic } from "@angular/platform-browser-dynamic"
+import { AppModule } from "./app/app.module"
+...
+platformBrowserDynamic.bootstrapModule(AppModule);
+
+====
+ngModule:
+
+declarations: all the components to be used in the module.
+imports: other modules dependencies .e.g forms, http.
+providers: register module services.
+bootstrap: all the components that must to be known by angular at the time of analysing index.html (usually only AppComponent)
+
+====
+
+
+
