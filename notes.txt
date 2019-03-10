@@ -84,4 +84,10 @@ bootstrap: all the components that must to be known by angular at the time of an
 ====
 
 
+Observables
+import { Observable, of } from 'rxjs';
 
+// custom success observable (mock)
+getMockData() Observable<Hero[]>  {
+ return of(HEROES) ;
+}
